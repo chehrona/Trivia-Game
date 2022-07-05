@@ -22,12 +22,14 @@ $(document).ready(function () {
         if ($(this).text() === correctAnswers[questionCount]) {
             $("#questionText").text("Correct!");
             $(".answers").remove();
-            $("#answerBox").append('<img id="newton" src="../images/newton.gif"/>');
+            $("#answerBox").append('<img id="newton" src="newton.gif"/>');
+            $("#newton").css({"height": "200px", "width": "300px", "margin": "10px", "border-radius": "20px"});
             questionCount++;
         } else if ($(this).text() !== correctAnswers[questionCount]) {
             $("#questionText").text("Wrong!");
             $(".answers").remove();
-            $("#answerBox").append('<img id="newton" src="../images/newton.gif"/>');
+            $("#answerBox").append('<img id="newton" src="https://i.gifer.com/9LAp.gif"/>');
+            $("#newton").css({"height": "200px", "width": "300px", "margin": "10px", "border-radius": "20px"});
         }
         })
 
