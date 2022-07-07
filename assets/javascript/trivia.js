@@ -11,6 +11,7 @@ $(document).ready(function () {
     let questionCount = 0;
 
     let correctAnswers = ["Isaac Newton", "Hydrogen", "Insulator", "Electrons, protons, neutrons", "Lead", "Ears"];
+    let imageArr = ["newton.gif", "hydro.gif", "insulator", "atom.gif", "lead.gif", "ears.gif"];
 
     $("#questionText").text(questionsArr[questionCount].q);
         $("#firstA").text(questionsArr[questionCount].a[0]);
@@ -18,18 +19,28 @@ $(document).ready(function () {
         $("#thirdA").text(questionsArr[questionCount].a[2]);
         $("#forthA").text(questionsArr[questionCount].a[3]);
 
+    let timerStart = 20;
+    for (let i = 0; i < timerStart; i++) {
+        setTimeout(function () {
+             timerStart -= i;
+             $("#timer").text("0: " + timerStart);
+         }, 1000);
+    }
+
+
      $(".answers").on("click", function () {
         if ($(this).text() === correctAnswers[questionCount]) {
             $("#questionText").text("Correct!");
             $(".answers").remove();
-            $("#answerBox").append('<img id="newton" src="newton.gif"/>');
-            $("#newton").css({"height": "200px", "width": "300px", "margin": "10px", "border-radius": "20px"});
+            $("#answerBox").append('<img id="image" src="./assets/images/' + imageArr[questionCount] + '"/>');
+            $("#image").css({"height": "280px", "width": "400px", "margin": "10px", "border-radius": "20px","border": "3px solid #0086a2", "box-shadow": "grey 2px 2px"});
             questionCount++;
         } else if ($(this).text() !== correctAnswers[questionCount]) {
-            $("#questionText").text("Wrong!");
+            $("#questionText").html("Wrong!<br><br>" + "The Correct Answer Was: " + correctAnswers[questionCount]);
             $(".answers").remove();
-            $("#answerBox").append('<img id="newton" src="https://i.gifer.com/9LAp.gif"/>');
-            $("#newton").css({"height": "200px", "width": "300px", "margin": "10px", "border-radius": "20px"});
+            $("#answerBox").append('<img id="image" src="./assets/images/' + imageArr[questionCount] + '"/>');
+            $("#image").css({"height": "280px", "width": "400px", "margin": "10px", "border-radius": "20px","border": "3px solid #0086a2", "box-shadow": "grey 2px 2px"});
+            questionCount++;
         }
         })
 
