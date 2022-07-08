@@ -42,20 +42,35 @@ $(document).ready(function () {
      let callNext = function () {
         questionCount++;
         if (questionCount < questionsArr.length) {
-            timerStart = 11;
+            $("#timer").text("0:10");
+            timerStart = 10;
             $("#image").remove();
             questionsPrint();
             answerClicking();
         } else {
+            $("#timer").addClass("startAgain");
+            $("#timer").text("Start Over");
             $(".answers").remove();
             $("#image").remove();
-            $("#questionText").text("All done, here's how you did:");
+            $("#questionText").text("All done! Here's how you did");
             $("#answerBox").append('<p id="firstA" class="answers"></p>')
             $("#firstA").text("Unanswered: " + timeOuts);
             $("#answerBox").append('<p id="secondA" class="answers"></p>')
             $("#secondA").text("Correct: " + corrects);
             $("#answerBox").append('<p id="thirdA" class="answers"></p>')
             $("#thirdA").text("Wrong: "  + wrongs);
+            $("#timer").on("click", function () {
+                $("#timer").text("0:10");
+                $("#timer").css({"background-color": "#629819", "color": "black"});
+                $(".answers").remove();
+                timerStart = 10;
+                questionCount = 0;
+                corrects = 0;
+                wrongs = 0;
+                timeOuts = 0;
+                questionsPrint();
+                answerClicking();
+            })
         }
     };
 
@@ -67,9 +82,9 @@ $(document).ready(function () {
             if (timerStart > 0) {
                 timerStart--;
                 if (timerStart >= 10) {
-                    $("#timer").html("0:" + timerStart);
+                    $("#timer").text("0:" + timerStart);
                 } else if (timerStart < 10) {
-                    $("#timer").html("0:0" + timerStart);
+                    $("#timer").text("0:0" + timerStart);
                 }
             }
         }
@@ -110,7 +125,7 @@ $(document).ready(function () {
                 });
                 wrongs++;
             }
-            setTimeout(callNext, 5000);
+            setTimeout(callNext, 3000);
         });
 
     };

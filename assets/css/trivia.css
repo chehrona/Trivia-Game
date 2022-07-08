@@ -71,6 +71,7 @@ body {
     border-radius: 30px;
     font-size: 24px;
     background-color: #cd8800;
+    cursor: pointer;
 }
 
 .answers:last-child {
@@ -93,4 +94,11 @@ body {
     padding: 10px;
     box-shadow: grey 2px 2px;
 
+}
+
+#timer.startAgain:hover {
+    background-color: #225730;
+    box-shadow: 3px 3px slategrey;
+    cursor: pointer;
+    color: antiquewhite;
 }
