@@ -9,12 +9,20 @@ $(document).ready(function () {
             "q": "What is a material that will not carry an electrical charge called?",
             "a": ["Conductor", "Inductor", "Insulator", "Resistor"]
         },
-        {
-            "q": "What does an atom consist of?",
+        {"q": "What does an atom consist of?",
             "a": ["Electrons, neutrons, alpha-particles", "Electrons, gamma-rays, neutrinos", "Electrons, protons, neutrons", "Electrons, neutrinos, protons"]
         },
         {"q": "What element does not allow radioactive rays to go through?", "a": ["Lead", "Gold", "Zinc", "Cobalt"]},
         {"q": "What organ in humans is responsible for maintaining balance?", "a": ["Legs", "Arms", "Ears", "Eyes"]},
+        {"q": "What is the largest human organ?", "a": ["Liver", "Brain", "Stomach", "Skin"]},
+        {"q": "What element generates the most amount of energy in a nuclear reactor?", "a": ["Plutonium", "Americium", "Radium", "Uranium"]},
+        {"q": "What is the body's energy currency?", "a": ["ATP", "CTP", "TTP", "GTP"]},
+        {"q": "How many color receptors are in the human eye?", "a": ["Seven", "Three", "Five", "Ten"]},
+        {"q": "Who discovered penicillin?", "a": ["Dimitri Mendeleev", "James Watson & Francis Crick", "Alexander Fleming", "Jennifer Doudna"]},
+
+
+
+
     ];
 
     let questionCount = 0;
@@ -23,8 +31,8 @@ $(document).ready(function () {
     let wrongs = 0;
 
 
-    let correctAnswers = ["Isaac Newton", "Hydrogen", "Insulator", "Electrons, protons, neutrons", "Lead", "Ears"];
-    let imageArr = ["newton.gif", "hydrogen.gif", "insulator.gif", "atom.gif", "lead.gif", "ears.gif"];
+    let correctAnswers = ["Isaac Newton", "Hydrogen", "Insulator", "Electrons, protons, neutrons", "Lead", "Ears", "Skin", "Uranium", "ATP", "Three", "Alexander Fleming"];
+    let imageArr = ["newton.gif", "hydrogen.gif", "insulator.gif", "atom.gif", "lead.gif", "ears.gif", "skin.gif", "uranium.gif", "atp.gif", "eye.gif"];
 
 
     let questionsPrint = function () {
