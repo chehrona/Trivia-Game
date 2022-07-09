@@ -19,6 +19,9 @@ $(document).ready(function () {
         {"q": "What is the body's energy currency?", "a": ["ATP", "CTP", "TTP", "GTP"]},
         {"q": "How many color receptors are in the human eye?", "a": ["Seven", "Three", "Five", "Ten"]},
         {"q": "Who discovered penicillin?", "a": ["Dimitri Mendeleev", "James Watson & Francis Crick", "Alexander Fleming", "Jennifer Doudna"]},
+        {"q": "What is the biggest planet in our solar system?", "a": ["Pluto", "Mars", "Venus", "Jupiter"]},
+        {"q": "What is the most abundant gas in the Earth's atmosphere?", "a": ["Carbon dioxide", "Oxygen", "Nitrogen", "Ozone"]}
+
 
 
 
@@ -31,8 +34,10 @@ $(document).ready(function () {
     let wrongs = 0;
 
 
-    let correctAnswers = ["Isaac Newton", "Hydrogen", "Insulator", "Electrons, protons, neutrons", "Lead", "Ears", "Skin", "Uranium", "ATP", "Three", "Alexander Fleming"];
-    let imageArr = ["newton.gif", "hydrogen.gif", "insulator.gif", "atom.gif", "lead.gif", "ears.gif", "skin.gif", "uranium.gif", "atp.gif", "eye.gif", "antibiotic.gif"];
+    let correctAnswers = ["Isaac Newton", "Hydrogen", "Insulator", "Electrons, protons, neutrons", "Lead", "Ears", "Skin", "Uranium", "ATP", "Three", "Alexander Fleming",
+        "Jupiter", "Nitrogen"];
+    let imageArr = ["newton.gif", "hydrogen.gif", "insulator.gif", "atom.gif", "lead.gif", "ears.gif", "skin.gif", "uranium.gif", "atp.gif", "eye.gif", "antibiotic.gif",
+    "jupiter.gif", "nitrogen.gif"];
 
 
     let questionsPrint = function () {
