@@ -32,7 +32,7 @@ $(document).ready(function () {
 
 
     let correctAnswers = ["Isaac Newton", "Hydrogen", "Insulator", "Electrons, protons, neutrons", "Lead", "Ears", "Skin", "Uranium", "ATP", "Three", "Alexander Fleming"];
-    let imageArr = ["newton.gif", "hydrogen.gif", "insulator.gif", "atom.gif", "lead.gif", "ears.gif", "skin.gif", "uranium.gif", "atp.gif", "eye.gif"];
+    let imageArr = ["newton.gif", "hydrogen.gif", "insulator.gif", "atom.gif", "lead.gif", "ears.gif", "skin.gif", "uranium.gif", "atp.gif", "eye.gif", "antibiotic.gif"];
 
 
     let questionsPrint = function () {
@@ -133,7 +133,7 @@ $(document).ready(function () {
                 });
                 wrongs++;
             }
-            setTimeout(callNext, 3000);
+            setTimeout(callNext, 5000);
         });
 
     };
