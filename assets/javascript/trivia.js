@@ -143,6 +143,7 @@ $(document).ready(function () {
                     "height": "300px",
                     "width": "300px",
                     "border-radius": "20px",
+                    "margin-bottom": "40px",
                     "border": "3px solid #0086a2",
                     "box-shadow": "grey 2px 2px"
                 });
