@@ -21,17 +21,13 @@ $(document).ready(function () {
         {"q": "Who discovered penicillin?", "a": ["Dimitri Mendeleev", "James Watson & Francis Crick", "Alexander Fleming", "Jennifer Doudna"]},
         {"q": "What is the biggest planet in our solar system?", "a": ["Pluto", "Mars", "Venus", "Jupiter"]},
         {"q": "What is the most abundant gas in the Earth's atmosphere?", "a": ["Carbon dioxide", "Oxygen", "Nitrogen", "Ozone"]}
-
-
-
-
-
     ];
 
     let questionCount = 0;
     let corrects = 0;
     let timeOuts = 0;
     let wrongs = 0;
+    let timerStart = 10;
 
 
     let correctAnswers = ["Isaac Newton", "Hydrogen", "Insulator", "Electrons, protons, neutrons", "Lead", "Ears", "Skin", "Uranium", "ATP", "Three", "Alexander Fleming",
@@ -54,15 +50,17 @@ $(document).ready(function () {
 
      let callNext = function () {
         questionCount++;
+        timerStart = 10;
         if (questionCount < questionsArr.length) {
             $("#timer").text("0:10");
-            timerStart = 10;
             $("#image").remove();
             questionsPrint();
             answerClicking();
+            timerInterval = setInterval(timerPrint, 1000);
         } else {
+            timerStop();
             $("#timer").addClass("startAgain");
-            $("#timer").text("Start Over");
+            $(".startAgain").text("Start Over");
             $(".answers").remove();
             $("#image").remove();
             $("#questionText").text("All done! Here's how you did");
@@ -72,66 +70,78 @@ $(document).ready(function () {
             $("#secondA").text("Correct: " + corrects);
             $("#answerBox").append('<p id="thirdA" class="answers"></p>')
             $("#thirdA").text("Wrong: "  + wrongs);
-            $("#timer").on("click", function () {
+            $(".startAgain").on("click", function () {
                 $("#timer").text("0:10");
                 $("#timer").css({"background-color": "#629819", "color": "black"});
                 $(".answers").remove();
-                timerStart = 10;
                 questionCount = 0;
                 corrects = 0;
                 wrongs = 0;
                 timeOuts = 0;
                 questionsPrint();
                 answerClicking();
+                timerInterval = setInterval(timerPrint, 1000);
             })
         }
+
     };
 
-    let timerStart = 10;
 
+    let timerPrint = function () {
+        if (timerStart > 0) {
+            timerStart--;
+            if (timerStart >= 10) {
+                $("#timer").text("0:" + timerStart);
+            } else if (timerStart < 10) {
+                $("#timer").text("0:0" + timerStart);
+            }
+        } else {
+            timerStop();
+            $("#timer").html("0:00")
+            $("#questionText").html("Ran out of time!<br><br>" + "The Correct Answer Was: " + correctAnswers[questionCount]);
+            $(".answers").remove();
+            $("#answerBox").append('<img id="image" src="./assets/images/' + imageArr[questionCount] + '"/>');
+            $("#image").css({
+                "height": "300px",
+                "width": "300px",
+                "border-radius": "20px",
+                "border": "3px solid #0086a2",
+                "box-shadow": "grey 2px 2px"
+            });
+            timeOuts++;
+            setTimeout(callNext, 5000);
+        }
+    }
+
+    let timerInterval = setInterval(timerPrint, 1000);
+
+    let timerStop = function () {
+        clearInterval(timerInterval);
+    }
 
     let answerClicking = function () {
-        let timerPrint = function () {
-            if (timerStart > 0) {
-                timerStart--;
-                if (timerStart >= 10) {
-                    $("#timer").text("0:" + timerStart);
-                } else if (timerStart < 10) {
-                    $("#timer").text("0:0" + timerStart);
-                }
-            }
-        }
-
-        let timerInterval = setInterval(timerPrint, 1000);
-
-        let timerStop = function () {
-            clearInterval(timerInterval);
-        }
-
-
         $(".answers").on("click", function () {
             timerStop();
-            if (($(this).text() === correctAnswers[questionCount]) && timerStart > 0) {
+            if (($(this).text() === correctAnswers[questionCount]) && timerStart >= 0) {
                 $("#questionText").text("Correct!");
                 $(".answers").remove();
                 $("#answerBox").append('<img id="image" src="./assets/images/' + imageArr[questionCount] + '"/>');
                 $("#image").css({
                     "height": "300px",
                     "width": "300px",
-                    "margin": "10px",
+                    "margin": "40px",
                     "border-radius": "20px",
                     "border": "3px solid #0086a2",
                     "box-shadow": "grey 2px 2px"
                 });
                 corrects++;
-            } else if (($(this).text() !== correctAnswers[questionCount]) && timerStart > 0) {
+            } else if (($(this).text() !== correctAnswers[questionCount]) && timerStart >= 0) {
                 $("#questionText").html("Wrong!<br><br>" + "The Correct Answer Was: " + correctAnswers[questionCount]);
                 $(".answers").remove();
                 $("#answerBox").append('<img id="image" src="./assets/images/' + imageArr[questionCount] + '"/>');
                 $("#image").css({
                     "height": "300px",
                     "width": "300px",
-                    "margin": "10px",
                     "border-radius": "20px",
                     "border": "3px solid #0086a2",
                     "box-shadow": "grey 2px 2px"
@@ -140,29 +150,10 @@ $(document).ready(function () {
             }
             setTimeout(callNext, 5000);
         });
-
-    };
+    }
 
     questionsPrint();
     answerClicking();
-
-    if (timerStart === 0) {
-        $("#timer").html("0:00")
-        $("#questionText").html("Ran out of time!<br><br>" + "The Correct Answer Was: " + correctAnswers[questionCount]);
-        $(".answers").remove();
-        $("#answerBox").append('<img id="image" src="./assets/images/' + imageArr[questionCount] + '"/>');
-        $("#image").css({
-            "height": "300px",
-            "width": "300px",
-            "margin": "10px",
-            "border-radius": "20px",
-            "border": "3px solid #0086a2",
-            "box-shadow": "grey 2px 2px"
-        });
-            timeOuts++;
-            callNext();
-        }
-
 
 });
 
