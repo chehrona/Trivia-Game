@@ -13,7 +13,7 @@ body {
 
 #outerBox {
     background-color: #dce944;
-    margin-top: 2%;
+    margin-top: 1%;
     margin-right: 25%;
     margin-left: 25%;
     /*margin-bottom: 10%;*/
@@ -23,7 +23,7 @@ body {
     border-style: solid;
     border-image: linear-gradient(to right, #010428, #071c50, #035285, #0086a2, #007a80, #50dcd1, #75bf87, #93dc9d,
     #99bb41, #d5f0b8, #dce944, #dfc906, #c8b700, #cd8800, #cd5a01, #af1a03, #a24301, #b86700) 1;
-    min-height: 90%;
+    min-height: 85%;
 }
 
 #gameName {
