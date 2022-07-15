@@ -33,7 +33,7 @@ body {
 }
 
 #timeRemaining {
-    font-size: 40px;
+    font-size: 38px;
     font-weight: bold;
     color: #af1a03;
 }
@@ -41,11 +41,11 @@ body {
 #timer {
     border: 3px solid #0086a2;
     background-color: #629819;
-    font-size: 60px;
+    font-size: 55px;
     font-weight: bolder;
     border-radius: 50%;
-    min-width: 50px;
-    max-width: 170px;
+    min-width: 40px;
+    max-width: 120px;
     padding-left: 1%;
     padding-right: 1%;
     padding-top: 2%;
@@ -111,8 +111,8 @@ body {
 }
 
 .gifs {
-    height: 250px;
-    width: 250px;
+    height: 270px;
+    width: 270px;
     border-radius: 20px;
     border: 3px solid #0086a2;
     box-shadow: grey 2px 2px;
