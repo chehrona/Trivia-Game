@@ -10,7 +10,7 @@ $(document).ready(function () {
             "a": ["Conductor", "Inductor", "Insulator", "Resistor"]
         },
         {"q": "What does an atom consist of?",
-            "a": ["Electrons, neutrons, alpha-particles", "Electrons, gamma-rays, neutrinos", "Electrons, protons, neutrons", "Electrons, neutrinos, protons"]
+            "a": ["Electrons, neutrons, α-particles", "Electrons, γ-rays, neutrinos", "Electrons, protons, neutrons", "Electrons, neutrinos, protons"]
         },
         {"q": "What element does not allow radioactive rays to go through?", "a": ["Lead", "Gold", "Zinc", "Cobalt"]},
         {"q": "What organ in humans is responsible for maintaining balance?", "a": ["Legs", "Arms", "Ears", "Eyes"]},
