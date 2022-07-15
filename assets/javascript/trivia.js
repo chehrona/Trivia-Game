@@ -53,7 +53,7 @@ $(document).ready(function () {
         timerStart = 10;
         if (questionCount < questionsArr.length) {
             $("#timer").text("0:10");
-            $("#image").remove();
+            $(".gifs").remove();
             questionsPrint();
             answerClicking();
             timerInterval = setInterval(timerPrint, 1000);
@@ -62,7 +62,7 @@ $(document).ready(function () {
             $("#timer").addClass("startAgain");
             $(".startAgain").text("Start Over");
             $(".answers").remove();
-            $("#image").remove();
+            $(".gifs").remove();
             $("#questionText").text("All done! Here's how you did");
             $("#answerBox").append('<p id="firstA" class="answers"></p>')
             $("#firstA").text("Unanswered: " + timeOuts);
@@ -98,16 +98,9 @@ $(document).ready(function () {
         } else {
             timerStop();
             $("#timer").html("0:00")
-            $("#questionText").html("Ran out of time!<br><br>" + "The Correct Answer Was: " + correctAnswers[questionCount]);
+            $("#questionText").html("Ran out of time!<br>" + "The Correct Answer Was: " + correctAnswers[questionCount]);
             $(".answers").remove();
-            $("#answerBox").append('<img id="image" src="./assets/images/' + imageArr[questionCount] + '"/>');
-            $("#image").css({
-                "height": "300px",
-                "width": "300px",
-                "border-radius": "20px",
-                "border": "3px solid #0086a2",
-                "box-shadow": "grey 2px 2px"
-            });
+            $("#answerBox").append('<img class="gifs" src="./assets/images/' + imageArr[questionCount] + '"/>');
             timeOuts++;
             setTimeout(callNext, 5000);
         }
@@ -125,28 +118,12 @@ $(document).ready(function () {
             if (($(this).text() === correctAnswers[questionCount]) && timerStart >= 0) {
                 $("#questionText").text("Correct!");
                 $(".answers").remove();
-                $("#answerBox").append('<img id="image" src="./assets/images/' + imageArr[questionCount] + '"/>');
-                $("#image").css({
-                    "height": "300px",
-                    "width": "300px",
-                    "margin": "40px",
-                    "border-radius": "20px",
-                    "border": "3px solid #0086a2",
-                    "box-shadow": "grey 2px 2px"
-                });
+                $("#answerBox").append('<img class="gifs" id="correctGIF" src="./assets/images/' + imageArr[questionCount] + '"/>');
                 corrects++;
             } else if (($(this).text() !== correctAnswers[questionCount]) && timerStart >= 0) {
-                $("#questionText").html("Wrong!<br><br>" + "The Correct Answer Was: " + correctAnswers[questionCount]);
+                $("#questionText").html("Wrong!<br>" + "The Correct Answer Was: " + correctAnswers[questionCount]);
                 $(".answers").remove();
-                $("#answerBox").append('<img id="image" src="./assets/images/' + imageArr[questionCount] + '"/>');
-                $("#image").css({
-                    "height": "300px",
-                    "width": "300px",
-                    "border-radius": "20px",
-                    "margin-bottom": "40px",
-                    "border": "3px solid #0086a2",
-                    "box-shadow": "grey 2px 2px"
-                });
+                $("#answerBox").append('<img class="gifs" src="./assets/images/' + imageArr[questionCount] + '"/>');
                 wrongs++;
             }
             setTimeout(callNext, 5000);

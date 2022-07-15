@@ -7,7 +7,7 @@ body {
     background-repeat: no-repeat;
     background-color: black;
     height: 100%;
-    overflow: hidden;
+    /*overflow: hidden;*/
     /*padding: 1%;*/
 }
 
@@ -47,21 +47,20 @@ body {
     font-size: 60px;
     font-weight: bolder;
     border-radius: 50%;
-    min-width: 10%;
+    min-width: 50px;
+    max-width: 170px;
     padding-left: 1%;
     padding-right: 1%;
     padding-top: 2%;
     padding-bottom: 2%;
+    box-shadow: grey 2px 2px;
+    margin: auto;
     margin-top: 2%;
     margin-bottom: 3%;
-    margin-right: 40%;
-    margin-left: 40%;
-    box-shadow: grey 2px 2px;
-    text-align: center;
 }
 
 #answerBox {
-    margin-top: 1%;
+    margin-top: 20px;
     margin-bottom: 1%;
     /*border: solid 2px black;*/
     margin-right: 25%;
@@ -96,7 +95,7 @@ body {
     background-color: #c8b700;
     margin-right: 25%;
     margin-left: 25%;
-    margin-bottom: 40px;
+    /*margin-bottom: 40px;*/
     border-radius: 20px;
     padding: 10px;
     box-shadow: grey 2px 2px;
@@ -108,4 +107,17 @@ body {
     box-shadow: 3px 3px slategrey;
     cursor: pointer;
     color: antiquewhite;
+}
+
+.gifs {
+    height: 300px;
+    width: 300px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    border: 3px solid #0086a2;
+    box-shadow: grey 2px 2px;
+}
+
+#correctGIF {
+    margin-top: 20px;
 }
