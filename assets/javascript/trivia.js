@@ -18,7 +18,7 @@ $(document).ready(function () {
         {"q": "What element generates the most amount of energy in a nuclear reactor?", "a": ["Plutonium", "Americium", "Radium", "Uranium"]},
         {"q": "What is the body's energy currency?", "a": ["ATP", "CTP", "TTP", "GTP"]},
         {"q": "How many color receptors are in the human eye?", "a": ["Seven", "Three", "Five", "Ten"]},
-        {"q": "Who discovered penicillin?", "a": ["Dimitri Mendeleev", "James Watson & Francis Crick", "Alexander Fleming", "Jennifer Doudna"]},
+        {"q": "Who discovered penicillin?", "a": ["Dimitri Mendeleev", "James Watson", "Alexander Fleming", "Jennifer Doudna"]},
         {"q": "What is the biggest planet in our solar system?", "a": ["Pluto", "Mars", "Venus", "Jupiter"]},
         {"q": "What is the most abundant gas in the Earth's atmosphere?", "a": ["Carbon dioxide", "Oxygen", "Nitrogen", "Ozone"]}
     ];

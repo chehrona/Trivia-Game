@@ -103,6 +103,10 @@ body {
 
 }
 
+#timer.startAgain {
+    font-size: 42px;
+}
+
 #timer.startAgain:hover {
     background-color: #225730;
     box-shadow: 3px 3px slategrey;
