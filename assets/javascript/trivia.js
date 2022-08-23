@@ -52,6 +52,7 @@ $(document).ready(function () {
         questionCount++;
         timerStart = 10;
         if (questionCount < questionsArr.length) {
+            $("#timer").removeClass("startAgain");
             $("#timer").text("0:10");
             $(".gifs").remove();
             questionsPrint();
@@ -60,7 +61,7 @@ $(document).ready(function () {
         } else {
             timerStop();
             $("#timer").addClass("startAgain");
-            $(".startAgain").text("Again");
+            $(".startAgain").text("Start Over");
             $(".answers").remove();
             $(".gifs").remove();
             $("#questionText").text("All done! Here's how you did");
