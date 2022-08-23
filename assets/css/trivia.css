@@ -7,12 +7,13 @@ body {
 }
 
 #outerBox {
-    margin-top: 50px;
+    margin-top: 20px;
     margin-right: 10%;
     margin-left: 10%;
     margin-bottom: 0px;
     width: 80%;
-    min-height: 1600px;
+    min-height: 1500px;
+    min-height: 1400px;
     background-color: #dce944;
     text-align: center;
     border-width: 10px;
