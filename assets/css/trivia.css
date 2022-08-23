@@ -7,7 +7,7 @@ body {
 }
 
 #outerBox {
-    margin-top: 20px;
+    margin-top: 50px;
     margin-right: 10%;
     margin-left: 10%;
     margin-bottom: 0px;
@@ -129,11 +129,7 @@ body {
     margin-bottom: 10px;
 }
 
-@media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) {
+@media only screen and (min-device-width: 1200px) {
     #outerBox {
         margin-top: 1%;
         margin-right: 25%;
