@@ -7,12 +7,12 @@ body {
 }
 
 #outerBox {
-    margin-top: 150px;
+    margin-top: 50px;
     margin-right: 10%;
     margin-left: 10%;
     margin-bottom: 0px;
     width: 80%;
-    min-height: 1800px;
+    min-height: 1600px;
     background-color: #dce944;
     text-align: center;
     border-width: 10px;
@@ -25,8 +25,8 @@ body {
     padding-top: 3%;
     padding-bottom: 3%;
     font-size: 80px;
-    margin-bottom: 100px;
-    margin-top: 50px;
+    margin-bottom: 70px;
+    margin-top: 30px;
     font-weight: bold;
     color: #071c50;
     text-shadow: 2px 2px grey;
@@ -60,7 +60,7 @@ body {
     margin-bottom: 1%;
     margin-right: 80px;
     margin-left: 80px;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 #questionText {
