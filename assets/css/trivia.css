@@ -93,6 +93,8 @@ body {
     color: white;
 }
 
+
+
 #questionBox {
     border: 3px solid #af1a03;
     font-size: 26px;
@@ -183,7 +185,9 @@ body {
         margin-top: 2%;
         border-radius: 30px;
         font-size: 35px;
+        pointer-events: none;
     }
+    
     
     #timer.startAgain {
         font-size: 45px;
