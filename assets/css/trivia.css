@@ -142,17 +142,17 @@ body {
     }
 
     #gameName {
-        font-size: 70px;
-        margin-bottom: 50px;
-        margin-top: 30px;
+        font-size: 50px;
+        margin-bottom: 20px;
+        margin-top: 20px;
     }
 
     #timeRemaining {
-        font-size: 45px;
+        font-size: 35px;
     }
 
     #timer {
-        font-size: 65px;
+        font-size: 55px;
         width: 180px;
         min-width: 150px;
         margin-top: 2%;
