@@ -87,14 +87,6 @@ body {
     margin-bottom: 5%;
 }
 
-.answers:hover {
-    background-color: #cd5a01;
-    box-shadow: 2px 2px grey;
-    color: white;
-}
-
-
-
 #questionBox {
     border: 3px solid #af1a03;
     font-size: 26px;
@@ -181,7 +173,12 @@ body {
         margin-top: 2%;
         border-radius: 30px;
         font-size: 35px;
-        pointer-events: none;
+    }
+
+    .answers:hover {
+        background-color: #cd5a01;
+        box-shadow: 2px 2px grey;
+        color: white;
     }
     
     
