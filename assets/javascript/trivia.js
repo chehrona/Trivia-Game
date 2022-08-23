@@ -60,7 +60,7 @@ $(document).ready(function () {
         } else {
             timerStop();
             $("#timer").addClass("startAgain");
-            $(".startAgain").text("Start Over");
+            $(".startAgain").text("Again");
             $(".answers").remove();
             $(".gifs").remove();
             $("#questionText").text("All done! Here's how you did");

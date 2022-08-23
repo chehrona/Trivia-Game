@@ -42,7 +42,7 @@ body {
 #timer {
     border: 3px solid #0086a2;
     background-color: #629819;
-    font-size: 120px;
+    font-size: 120px !important;
     font-weight: bolder;
     border-radius: 50%;
     width: 250px;
@@ -106,10 +106,6 @@ body {
     border-radius: 20px;
     padding: 10px;
     box-shadow: grey 2px 2px;
-}
-
-#timer.startAgain {
-    font-size: 60px;
 }
 
 #timer.startAgain:hover {
