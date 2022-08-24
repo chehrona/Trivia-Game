@@ -52,7 +52,6 @@ $(document).ready(function () {
         questionCount++;
         timerStart = 10;
         if (questionCount < questionsArr.length) {
-            $("#timer").removeClass("startAgain");
             $("#timer").text("0:10");
             $(".gifs").remove();
             questionsPrint();
@@ -75,6 +74,7 @@ $(document).ready(function () {
                 $("#timer").text("0:10");
                 $("#timer").css({"background-color": "#629819", "color": "black"});
                 $(".answers").remove();
+                $("#timer").removeClass("startAgain");
                 questionCount = 0;
                 corrects = 0;
                 wrongs = 0;
